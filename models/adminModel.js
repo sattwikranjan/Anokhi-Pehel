@@ -13,11 +13,4 @@ const adminSchema = new mongoose.Schema({
 
 const adminModel = mongoose.model("Admin", adminSchema);
 
-const admin = new adminModel({
-  username: "AnokhiAdmin",
-  password: "Anokhi",
-});
-
-//admin.save();
-
 module.exports = adminModel;
