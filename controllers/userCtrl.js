@@ -1,6 +1,7 @@
 const adminModel = require("../models/adminModel");
 const jwt = require("jsonwebtoken");
-
+const teacherModel = require("../models/teacherModel");
+//const teacherModel = require("../models/teacherModel");
 //login controller
 const loginController = async (req, res) => {
   try {
@@ -56,4 +57,22 @@ const authController = async (req, res) => {
   }
 };
 
-module.exports = { loginController, authController };
+//GET ALL TEACHERS CONTROLLER
+const getAllTeachersController = async (req, res) => {
+  try {
+    const teachers = await teacherModel.find();
+    res.status(200).send({
+      message: "Teachers List Fetched Successfully",
+      success: true,
+      data: teachers,
+    });
+  } catch (error) {
+    res.status(500).send({
+      success: false,
+      error,
+      message: "Error While fetching teachers list",
+    });
+  }
+};
+
+module.exports = { loginController, authController, getAllTeachersController };

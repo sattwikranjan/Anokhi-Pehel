@@ -33,4 +33,24 @@ const teacherSchema = new mongoose.Schema({
 
 const teacherModel = mongoose.model("Teachers", teacherSchema);
 
+// const createDocument = async () => {
+//   try {
+//     const data = new teacherModel({
+//       name: "Sattwik Ranjan",
+//       email: "sattwikranjan@gmail.com",
+//       contact: "9749556671",
+//       class: ["1", "2"],
+//       location: "chilla",
+//       pickDays: ["sat", "sun"],
+//       dropDays: ["mon", "tue"],
+//     });
+//     const result = await data.save();
+//     console.log(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// createDocument();
+
 module.exports = teacherModel;

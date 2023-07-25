@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/LayoutStyles.css";
 import { userMenu } from "../Data/data";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Layout = ({ children }) => {
   const location = useLocation();
 
@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
             const isActive = location.pathname === menu.path;
             return (
               <>
+                {/* eslint-disable-next-line */}
                 <a className={`menu-item ${isActive && "active"}`}>
                   <i className={menu.icon}></i>
                   <Link to={menu.path}>{menu.name}</Link>

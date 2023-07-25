@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import { useSelector } from "react-redux";
 import Spinner from "./components/Spinner";
+import Teachers from "./pages/Teachers";
 
 const App = () => {
   const { loading } = useSelector((state) => state.alerts);
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/teachers" element={<Teachers />} />
         </Routes>
       )}
     </BrowserRouter>

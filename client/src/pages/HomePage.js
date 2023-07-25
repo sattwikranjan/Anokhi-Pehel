@@ -5,6 +5,7 @@ const HomePage = () => {
   //login userdata
   const getUserData = async (req, res) => {
     try {
+      // eslint-disable-next-line
       const res = await axios.post(
         "/api/v1/user/getUserData",
         {},
